@@ -1,0 +1,21 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #1")
+
+#Inician los atributos 
+class AlumnoDe3W:
+    def __init__(self, alumno, calificacion):
+        self.alumno = alumno
+        self.calificacion = calificacion
+
+    def imprimir_resultados(self):
+        print(f"Alumno: {self.alumno}\nCalificación: {self.calificacion}")
+        print("¡Has APROBADO!" if self.calificacion >= 7 else "¡Has REPROBADO!")
+
+#Solicita los datos del alumno
+nombre_alumno = input("Ingrese el nombre del alumno: ")
+calificacion_alumno = float(input("Ingrese la calificación del alumno: "))
+
+#Nos muestra los resultados 
+alumno = AlumnoDe3W(nombre_alumno, calificacion_alumno)
+alumno.imprimir_resultados()
