@@ -63,19 +63,19 @@ print(f"{persona.nombre} cumple {persona.edad} años")
 
 class Calculadora:
     def suma(self, num1, num2):
-        """Suma dos números y muestra el resultado."""
+        #Aqui suma dos números y muestra el resultado
         return num1 + num2
 
     def resta(self, num1, num2):
-        """Resta dos números y muestra el resultado."""
+        #Aqui resta dos números y muestra el resultado
         return num1 - num2
 
     def multiplicacion(self, num1, num2):
-        """Multiplica dos números y muestra el resultado."""
+        #Aqui multiplica dos números y muestra el resultado
         return num1 * num2
 
     def division(self, num1, num2):
-        """Realiza una división, manejando la división por cero."""
+        #Aqui realiza una división, manejando la división por cero
         if num2 == 0:
             return "Error: No se puede dividir por cero."
         return num1 / num2
@@ -94,11 +94,11 @@ print(f"Resta: {calc.resta(num1, num2)}")
 print(f"Multiplicación: {calc.multiplicacion(num1, num2)}")
 print(f"División: {calc.division(num1, num2)}")
 
-![image](https://github.com/user-attachments/assets/8c0791cd-def2-4cd3-a746-6b8fc5129cc5)
-![image](https://github.com/user-attachments/assets/a3f66269-ff26-46fd-a3ef-6fc85b16cbc6)
+![image](https://github.com/user-attachments/assets/20e6db8d-eddd-4c9b-a974-f8bb4f55a13e)
+![image](https://github.com/user-attachments/assets/659cb672-8887-427c-ad56-f980586088d0)
 ![image](https://github.com/user-attachments/assets/dabefac8-8456-4bb9-8faf-8036ac5bab2c)
 
-# Codigo #2
+# Codigo #4
 - codigo creado con el ejemplo del codigo #1 de los ejercicios de PY
 
 
@@ -108,7 +108,7 @@ print(f"División: {calc.division(num1, num2)}")
 
 
 
-# Codigo #2
+# Codigo #5
 - codigo creado con el ejemplo del codigo #1 de los ejercicios de PY
 
 
@@ -119,7 +119,7 @@ print(f"División: {calc.division(num1, num2)}")
 
 
 
-# Codigo #2
+# Codigo #6
 - codigo creado con el ejemplo del codigo #1 de los ejercicios de PY
 
 
@@ -129,6 +129,6 @@ print(f"División: {calc.division(num1, num2)}")
 
 
 
-# Codigo #2
+# Codigo #7
 - codigo creado con el ejemplo del codigo #1 de los ejercicios de PY
 
