@@ -61,6 +61,10 @@ print(f"{persona.nombre} cumple {persona.edad} años")
 # Codigo #3
 - codigo creado con el ejemplo del codigo #1 de los ejercicios de PY
 
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #3")
+
 class Calculadora:
     def suma(self, num1, num2):
         #Aqui suma dos números y muestra el resultado
@@ -101,11 +105,53 @@ print(f"División: {calc.division(num1, num2)}")
 # Codigo #4
 - codigo creado con el ejemplo del codigo #1 de los ejercicios de PY
 
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #4")
 
 
+class Persona():
+    def __init__(self, nom, ape):
+        #Pide el nombre y el apellido de la persona
+        self.nombre = nom
+        self.apellido = ape
 
+    def nombre_completo(self):
+        #Nos muestra el nombre completo de la persona
+        print(self.nombre + " " + self.apellido)
 
+#Clase Estudiante 
+class Estudiante(Persona):
+    def __init__(self, nom, ape, carr):
+        #Llama a la clase base (Persona) para inicializar nombre y apellido
+        super().__init__(nom, ape)
+        self.carrera = carr
 
+    def mostrar_carrera(self):
+        print(self.carrera)
+
+#Se crea la funcion principal donde solicita los datos al usuario 
+def crear_estudiante():
+    #Pedir nombre y apellido 
+    nombre = input("Ingresa el nombre del estudiante: ")  # Solicita el nombre del estudiante
+    apellido = input("Ingresa el apellido del estudiante: ")  # Solicita el apellido
+
+    #Pide que ingreses tu carrera
+    carrera = input("Ingresa la carrera del estudiante: ")  # Solicita la carrera del estudiante
+
+    #Crear un objeto con los datos ingresados
+    estudiante = Estudiante(nombre, apellido, carrera)
+    
+    # Mostrar el nombre completo y la carrera del estudiante
+    estudiante.nombre_completo()  # Llama a la clase de Persona
+    estudiante.mostrar_carrera()  #Llama a la clase de Estudiante
+
+# Llamamos a la función para crear un estudiante
+crear_estudiante()
+
+![image](https://github.com/user-attachments/assets/26af9778-821f-437e-a2b2-d1f92391c4eb)
+![image](https://github.com/user-attachments/assets/010f8dda-1994-46e7-ba7a-657376399f3c)
+![image](https://github.com/user-attachments/assets/8216d79e-5abf-4108-8a6d-f71542d7b47e)
 
 
 # Codigo #5
