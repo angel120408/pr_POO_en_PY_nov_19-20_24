@@ -1,0 +1,28 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #6")
+
+# Clase base para animales marinos
+class Marino:
+    def hablar(self):
+        print("¡Hola, soy un animal marino!")
+
+# Clase Pulpo que hereda de Marino
+class Pulpo(Marino):
+    def hablar(self):
+        print("¡Hola, soy un pulpo!")
+
+# Clase Foca que hereda de Marino
+class Foca(Marino):
+    def hablar(self, mensaje):
+        print(mensaje)
+
+# Crear instancias y mostrar sus mensajes
+marino = Marino()
+marino.hablar()
+
+pulpo = Pulpo()
+pulpo.hablar()
+
+foca = Foca()
+foca.hablar("¡Hola, soy una foca!")
