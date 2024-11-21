@@ -1,0 +1,36 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #3")
+
+class Calculadora:
+    def suma(self, num1, num2):
+        #Aqui suma dos números y muestra el resultado
+        return num1 + num2
+
+    def resta(self, num1, num2):
+        #Aqui resta dos números y muestra el resultado
+        return num1 - num2
+
+    def multiplicacion(self, num1, num2):
+        #Aqui multiplica dos números y muestra el resultado
+        return num1 * num2
+
+    def division(self, num1, num2):
+        #Aqui realiza una división, manejando la división por cero
+        if num2 == 0:
+            return "Error: No se puede dividir por cero."
+        return num1 / num2
+
+
+# Solicitar los números al usuario
+num1 = float(input("Ingresa el primer número: "))
+num2 = float(input("Ingresa el segundo número: "))
+
+# Crear una instancia de la calculadora
+calc = Calculadora()
+
+# Realizando las operaciones
+print(f"Suma: {calc.suma(num1, num2)}")
+print(f"Resta: {calc.resta(num1, num2)}")
+print(f"Multiplicación: {calc.multiplicacion(num1, num2)}")
+print(f"División: {calc.division(num1, num2)}")
