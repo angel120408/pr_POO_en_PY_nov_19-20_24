@@ -1,0 +1,46 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #5")
+
+# Clase base que representa un vehículo genérico
+class Fabrica:
+    def __init__(self, llantas, color, precio):
+        self._llantas = llantas
+        self._color = color
+        self._precio = precio
+
+# Clase Moto, hereda de Fabrica
+class Moto(Fabrica):
+    def mostrar_datos(self):
+        print(f"La cantidad de llantas: {self._llantas}")
+        print(f"El color es: {self._color}")
+        print(f"El precio es: {self._precio}")
+
+# Clase Carro, hereda de Fabrica
+class Carro(Fabrica):
+    def mostrar_datos(self):
+        print(f"La cantidad de llantas: {self._llantas}")
+        print(f"El color es: {self._color}")
+        print(f"El precio es: {self._precio}")
+
+# Entrada de datos para Moto
+print("Ingrese los datos para la moto:")
+moto_llantas = int(input("Cantidad de llantas: "))
+moto_color = input("Color: ")
+moto_precio = input("Precio: ")
+moto = Moto(moto_llantas, moto_color, moto_precio)
+
+# Mostrar datos de Moto
+print("\nOBJETO = moto")
+moto.mostrar_datos()
+
+# Entrada de datos para Carro
+print("\nIngrese los datos para el carro:")
+carro_llantas = int(input("Cantidad de llantas: "))
+carro_color = input("Color: ")
+carro_precio = input("Precio: ")
+carro = Carro(carro_llantas, carro_color, carro_precio)
+
+# Mostrar datos de Carro
+print("\nOBJETO = carro")
+carro.mostrar_datos()
