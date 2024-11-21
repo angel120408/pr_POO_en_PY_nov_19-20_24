@@ -1,0 +1,37 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #7")
+
+# Clase que representa una universidad
+class Universidad:
+    def __init__(self, nombre):
+        self.nombre_universidad = nombre
+
+# Clase que representa una carrera universitaria
+class Carrera:
+    def __init__(self, especialidad):
+        self.especialidad = especialidad
+
+# Clase que representa un estudiante, hereda de Universidad y Carrera
+class Estudiante(Universidad, Carrera):
+    def __init__(self, nombre_universidad, especialidad, nombre_estudiante, edad_estudiante):
+        Universidad.__init__(self, nombre_universidad)
+        Carrera.__init__(self, especialidad)
+        self.nombre = nombre_estudiante
+        self.edad = edad_estudiante
+
+    def mostrar_datos(self):
+        print(
+            f"El estudiante {self.nombre}, de {self.edad} años, "
+            f"estudia {self.especialidad} en la universidad {self.nombre_universidad}."
+        )
+
+# Capturar datos del usuario
+nombre_universidad = input("Ingrese el nombre de la universidad: ")
+especialidad = input("Ingrese la especialidad de la carrera: ")
+nombre_estudiante = input("Ingrese el nombre del estudiante: ")
+edad_estudiante = int(input("Ingrese la edad del estudiante: "))
+
+# Crear objeto estudiante y mostrar sus datos
+estudiante = Estudiante(nombre_universidad, especialidad, nombre_estudiante, edad_estudiante)
+estudiante.mostrar_datos()
