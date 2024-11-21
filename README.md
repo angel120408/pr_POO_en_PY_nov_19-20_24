@@ -157,24 +157,131 @@ crear_estudiante()
 # Codigo #5
 - codigo creado con el ejemplo del codigo #1 de los ejercicios de PY
 
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #5")
 
+# Clase base que representa un vehículo genérico
+class Fabrica:
+    def __init__(self, llantas, color, precio):
+        self._llantas = llantas
+        self._color = color
+        self._precio = precio
 
+# Clase Moto, hereda de Fabrica
+class Moto(Fabrica):
+    def mostrar_datos(self):
+        print(f"La cantidad de llantas: {self._llantas}")
+        print(f"El color es: {self._color}")
+        print(f"El precio es: {self._precio}")
 
+# Clase Carro, hereda de Fabrica
+class Carro(Fabrica):
+    def mostrar_datos(self):
+        print(f"La cantidad de llantas: {self._llantas}")
+        print(f"El color es: {self._color}")
+        print(f"El precio es: {self._precio}")
 
+# Entrada de datos para Moto
+print("Ingrese los datos para la moto:")
+moto_llantas = int(input("Cantidad de llantas: "))
+moto_color = input("Color: ")
+moto_precio = input("Precio: ")
+moto = Moto(moto_llantas, moto_color, moto_precio)
 
+# Mostrar datos de Moto
+print("\nOBJETO = moto")
+moto.mostrar_datos()
 
+# Entrada de datos para Carro
+print("\nIngrese los datos para el carro:")
+carro_llantas = int(input("Cantidad de llantas: "))
+carro_color = input("Color: ")
+carro_precio = input("Precio: ")
+carro = Carro(carro_llantas, carro_color, carro_precio)
 
+# Mostrar datos de Carro
+print("\nOBJETO = carro")
+carro.mostrar_datos()
+
+![image](https://github.com/user-attachments/assets/9db256de-a557-4aba-ab8e-937e60a4235a)
+![image](https://github.com/user-attachments/assets/c2b36cbb-50b0-40a8-bd9a-09ce70751b86)
+![image](https://github.com/user-attachments/assets/6133899d-2d77-4404-9bd5-36e58fcb3942)
 
 # Codigo #6
 - codigo creado con el ejemplo del codigo #1 de los ejercicios de PY
 
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #6")
 
+# Clase base para animales marinos
+class Marino:
+    def hablar(self):
+        print("¡Hola, soy un animal marino!")
 
+# Clase Pulpo que hereda de Marino
+class Pulpo(Marino):
+    def hablar(self):
+        print("¡Hola, soy un pulpo!")
 
+# Clase Foca que hereda de Marino
+class Foca(Marino):
+    def hablar(self, mensaje):
+        print(mensaje)
 
+# Crear instancias y mostrar sus mensajes
+marino = Marino()
+marino.hablar()
 
+pulpo = Pulpo()
+pulpo.hablar()
+
+foca = Foca()
+foca.hablar("¡Hola, soy una foca!")
+
+![image](https://github.com/user-attachments/assets/70fcab73-d985-4fe8-9891-5fb48ca1fe00)
+![image](https://github.com/user-attachments/assets/dfc8e331-2f96-400e-87e7-fdd46126d55d)
+![image](https://github.com/user-attachments/assets/11e65d5c-b24a-4172-9035-d17b5c9c0bca)
 
 
 # Codigo #7
 - codigo creado con el ejemplo del codigo #1 de los ejercicios de PY
 
+# Clase que representa una universidad
+class Universidad:
+    def __init__(self, nombre):
+        self.nombre_universidad = nombre
+
+# Clase que representa una carrera universitaria
+class Carrera:
+    def __init__(self, especialidad):
+        self.especialidad = especialidad
+
+# Clase que representa un estudiante, hereda de Universidad y Carrera
+class Estudiante(Universidad, Carrera):
+    def __init__(self, nombre_universidad, especialidad, nombre_estudiante, edad_estudiante):
+        Universidad.__init__(self, nombre_universidad)
+        Carrera.__init__(self, especialidad)
+        self.nombre = nombre_estudiante
+        self.edad = edad_estudiante
+
+    def mostrar_datos(self):
+        print(
+            f"El estudiante {self.nombre}, de {self.edad} años, "
+            f"estudia {self.especialidad} en la universidad {self.nombre_universidad}."
+        )
+
+# Capturar datos del usuario
+nombre_universidad = input("Ingrese el nombre de la universidad: ")
+especialidad = input("Ingrese la especialidad de la carrera: ")
+nombre_estudiante = input("Ingrese el nombre del estudiante: ")
+edad_estudiante = int(input("Ingrese la edad del estudiante: "))
+
+# Crear objeto estudiante y mostrar sus datos
+estudiante = Estudiante(nombre_universidad, especialidad, nombre_estudiante, edad_estudiante)
+estudiante.mostrar_datos()
+
+![image](https://github.com/user-attachments/assets/7fc8bc31-b874-43a7-a86f-acee884c76bd)
+![image](https://github.com/user-attachments/assets/3dfe7e46-0136-41c4-9bf0-78786aa11d04)
+![image](https://github.com/user-attachments/assets/39e8336d-501c-4bdf-9373-819100552419)
