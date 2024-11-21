@@ -1,0 +1,25 @@
+print("Ramirez Torres Angel Msnuel De 3°W")
+print("Num.Control : 1206")
+print("Codigo #2")
+
+#Inicia la clase
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def cumpleaños(self, veces=1):
+        self.edad += veces
+
+#Solicita los datos del usuario
+nombre = input("Ingrese el nombre: ")
+edad = int(input("Ingrese la edad: "))
+
+#Crea un objeto de la clase
+persona = Persona(nombre, edad)
+
+#Celebra dos cumpleaños
+persona.cumpleaños(2)
+
+#Nos muestra el resultado 
+print(f"{persona.nombre} cumple {persona.edad} años")
